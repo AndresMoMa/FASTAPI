@@ -46,7 +46,9 @@ class ItemResponse(BaseModel):
 	id: int
 	name: str
 	description: str
-
+@app.get("/")
+def read_root():
+	return {"message ":"JEASDSA"}
 
 # API endpoint to create an item
 @app.post("/items/", response_model=ItemResponse)
